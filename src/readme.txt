@@ -1,0 +1,1 @@
+to get everything  in column in a div we use flex-cols
