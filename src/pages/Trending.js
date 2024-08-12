@@ -19,8 +19,7 @@ const [data, setData] = useState([]);
           }, []);
 
   if (data.length === 0) {
-    return <div> Wo dekho Kabutar,
-      Are udhar dekho to.... </div>;
+    return <div> UI Loading... </div>;
   } else {
     return (
       <div >

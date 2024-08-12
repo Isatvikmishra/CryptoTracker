@@ -13,7 +13,12 @@ const watchlistSlice = createSlice({
                 return newState
         },
         handleRemoveCoins(state, actions){
-            console.log(state, actions); 
+            const getIndex = (element, array) =>
+                array.findIndex(
+                  (obj) => JSON.stringify(obj) === JSON.stringify(element)
+                );
+              const indexOfRemovingCoin = getIndex(actions.payload, state);
+              return state.slice(0, indexOfRemovingCoin);
         },
     }
 })

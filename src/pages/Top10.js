@@ -6,8 +6,6 @@ import { useRef } from "react";
 const Top10 = () => {
   const [data, setData] = useState([])
 
-  
-  const Data = useRef();
 
   
   useEffect(()=>{
@@ -28,7 +26,7 @@ const Top10 = () => {
     <div >Loading...</div>
   ) : (
     <div>
-      <h1 ref={Data}>Helo</h1>
+     
       <Cards apiData={data.coins} checker={"top10"} />
     </div>
     )
