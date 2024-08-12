@@ -54,7 +54,7 @@ const Card = ({ item, checker }) => {
       </div>
 
     <div className="flex items-center gap-4">
-      {checker !== "top10" && ( <h3 className="border px-2 py-1 text-[22px] rounded-3xl border-green-400 shadow-sm">&#x24;{item.price_change_24h}</h3>)}
+      {checker !== "top10" && ( <h3 className="border px-2 py-1 text-[22px] rounded-3xl border-green-400 shadow-sm">&#x24;{Math.round(item.price_change_24h * 10000) / 10000}</h3>)}
       <div className="border p-2 rounded-full border-green-500 shadow-md">
        { checker === "top10" ? (item.data.price_change_percentage_24h.usd > 0 ? (
           <FaArrowTrendUp />
