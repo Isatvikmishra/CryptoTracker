@@ -70,7 +70,7 @@ const Card = ({ item, checker }) => {
     </div>
     <h3 className="text-[28px] font-bold text-green-600">
        
-        &#x24;{checker === "top10"?  Math.round(item.data.price * 100000) / 100000 :item.current_price}
+        &#x24;{checker === "top10"?  Math.round(item.data.price * 100000) / 100000 : Math.round(item.current_price * 100000) / 100000}
       </h3>
       <div>
         <div>Total Volume: &#x24;{checker==="top10" ? item.data.total_volume : item.total_volume}</div>
