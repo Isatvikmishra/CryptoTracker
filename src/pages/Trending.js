@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Cards from "../components/Cards";
+import Loadingui from "../components/Loadingui";
 
 function Trending() {
 const [data, setData] = useState([]);
@@ -19,7 +20,7 @@ const [data, setData] = useState([]);
           }, []);
 
   if (data.length === 0) {
-    return <div> UI Loading... </div>;
+    return <Loadingui />;
   } else {
     return (
       <div >

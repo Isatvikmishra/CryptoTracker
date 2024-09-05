@@ -1,7 +1,7 @@
 import React, {useEffect, useState } from "react"
 import Cards from "../components/Cards"
 import { useRef } from "react";
-
+import Loadingui from "../components/Loadingui";
 
 const Top10 = () => {
   const [data, setData] = useState([])
@@ -23,7 +23,7 @@ const Top10 = () => {
   },[])
 
   return data.length === 0 ? (
-    <div >Loading...</div>
+    <Loadingui />
   ) : (
     <div>
      

@@ -14,6 +14,9 @@ import { createContext } from "react";
 import CoinsData from './components/CoinsData';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
+import Signin from "./pages/Signin";
+import Login from "./pages/Login";
+import NotFound from './pages/NotFound';
 
 
 export const Name = createContext();
@@ -44,7 +47,9 @@ const browserRouter = createBrowserRouter([
             {path:"/watchlist", element: <Watchlist/>},
             {path: "/coin/:id", element: <CoinByIdData />},
             {path: "/coinsData", element: <CoinsData />},
-
+            {path: "/signin", element: <Signin /> },
+            {path: "/login", element: <Login /> },
+            {path: "*", element: <NotFound /> },
 
         ],
         errorElement: <ErrorElement/>
