@@ -10,7 +10,7 @@ const Footer = () => {
   <footer className="bg-gradient-to-r from-blue-950 to-slate-900  mt-16 text-white py-8">
       <div className="container  mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="text-center md:text-left mb-3 md:mb-0">
-          <h2 className="text-4xl w-[52%] font-semibold">Monitor and analyze
+          <h2 className="text-4xl w-[51%] font-semibold">Monitor and analyze
              real-time cryptocurrency data seamlessly.</h2>
         </div>
         <div className="text-center md:text-right space-y-2">
