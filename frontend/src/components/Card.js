@@ -28,71 +28,64 @@ const Card = ({ item, checker }) => {
     dispatch(handleremovecoin(item));
   }
 
-  return (
-    <div className="w-full mt-5  bg-cyan-100 border shadow-lg gap-5 rounded-md py-4 px-5 flex flex-col">
-      <div className="flex gap-4 items-center ">
-        <abbr className="w-1/6" title="Click here to know more.">
-          <Link to={`/coin/${item.id}`}>
-            {" "}
-            <img
-              src={checker === "top10" ? item.thumb : item.image}
-              alt="Crypto symbol"
-            />
-          </Link>
-        </abbr>
-        <div className="flex flex-col w-full">
-          <h2 className="text-[20px] font-bold">{item.name}</h2>
-          <h2 className="text-[18px] font-semibold text-gray-500">
-            {item.symbol}
-          </h2>
-        </div>
-        {!starRenderingLogic ? (
-          <MdOutlineStarRate onClick={addCoin} className="text-[50px]" />
-        ) : (
-          <MdOutlineStar onClick={removeCoin} className="text-[50px]" />
-        )}
-      </div>
-
-      <div className="flex items-center gap-4 ">
-        {checker !== "top10" && (
-          <h3 className="border px-2 py-1 text-[22px] rounded-3xl border-green-400 shadow-sm">
-            &#x24;{item.price_change_24h}
-          </h3>
-        )}
-        <div className="border p-2 rounded-full border-green-400 shadow-sm">
-          {checker === "top10" ? (
-            item.data.price_change_percentage_24h.usd > 0 ? (
-              <FaArrowTrendUp />
+  return(
+  <div className=" w-full mt-5 py-4 px-5 flex flex-col border rounded-md shadow-lg bg-gradient-to-r from-cyan-200 to-blue-200 hover:from-orange-200 hover:to-pink-200">
+  <div className="flex items-center gap-4">
+    <img className="w-1/6 " src={checker === "top10" ? item.thumb : item.image} alt="crypto-logo"/>
+    <div className="flex flex-col w-full">
+    <abbr title="Click here to know more.">
+      <Link to={`/coin/${item.id}`}>  
+        <h2 className="text-[25px] font-bold">{item.name}</h2>
+        </Link>
+      </abbr> 
+    <h2 className="text-[20px] font-semibold text-gray-500">
+        {item.symbol}
+    </h2>
+  </div>
+   {checker !== "top10" && (
+        <div>
+          <div className={`${
+              starRenderingLogic 
+            }`}
+            onClick={starRenderingLogic ? removeCoin : addCoin}
+          >
+            {starRenderingLogic ? (
+              <MdOutlineStar className="text-[24px] mr-2" />
             ) : (
-              <FaArrowTrendDown />
-            )
-          ) : item.ath_change_percentage > 0 ? (
-            <FaArrowTrendUp />
-          ) : (
-            <FaArrowTrendDown />
-          )}
+              <MdOutlineStarRate className="text-[24px] mr-2" />
+            )}
+            
+          </div>
         </div>
-      </div>
+      )}
+  </div>
 
-      <h3 className="text-[28px] font-bold text-green-400">
-        {" "}
-        &#x24;
-        {checker === "top10"
-          ? Math.round(item.data.price * 1000) / 1000
-          : Math.round(item.current_price * 1000) / 1000}
-      </h3>
-      <div>
-        <div>
-          Total Volume:{" "}
-          {checker === "top10" ? item.data.total_volume : item.total_volume}
-        </div>
-        <div>
-          Market capcity:
-          {checker === "top10" ? item.data.market_cap : item.market_cap}
-        </div>
-      </div>
-    </div>
-  );
-};
+<div className="flex items-center gap-4">
+  {checker !== "top10" && ( <h3 className="border px-2 py-1 text-[22px] rounded-3xl border-green-400 shadow-sm">&#x24;{Math.round(item.price_change_24h * 10000) / 10000}</h3>)}
+  <div className="border p-2 rounded-full border-green-500 shadow-md">
+   { checker === "top10" ? (item.data.price_change_percentage_24h.usd > 0 ? (
+      <FaArrowTrendUp />
+    ) : (
+      <FaArrowTrendDown />
+    )):
+    item.price_change_24h > 0 ? (
+      <FaArrowTrendUp />
+    ) : (
+      <FaArrowTrendDown />
+    )}
+  </div>
+</div>
+<h3 className="text-[28px] font-bold text-green-600">
+   
+    &#x24;{checker === "top10"?  Math.round(item.data.price * 100000) / 100000 : Math.round(item.current_price * 100000) / 100000}
+  </h3>
+  <div>
+    <div>Total Volume: &#x24;{checker==="top10" ? item.data.total_volume : item.total_volume}</div>
+    <div>Market Cap:{checker === "top10" ? item.data.market_cap : item.market_cap}</div>
+  </div>
+</div>
+
+  )
+}
 
 export default Card;

@@ -2,7 +2,7 @@ import React from "react";
 
 const DummyUi = () => {
   return (
-    <section className="bg-white ">
+    <section className="bg-white fixed inset-0 bg-white flex justify-center items-center z-50 ">
       <div className="container px-6 py-10 mx-auto animate-pulse">
         <div className="w-48 h-2 mx-auto bg-gray-200 rounded-lg " />
         <p className="w-64 h-2 mx-auto mt-4 bg-gray-200 rounded-lg " />

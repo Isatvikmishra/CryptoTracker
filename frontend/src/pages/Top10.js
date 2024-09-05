@@ -4,6 +4,7 @@ import { useRef } from "react";
 import DummyUi from "../components/DummyUi";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
 const Top10 = () => {
   const [data, setData] = useState([]);
 
@@ -34,8 +35,9 @@ const Top10 = () => {
     <DummyUi />
   ) : (
     <div className="w-full container mx-auto">
-      <h1 ref={Data}>Helo</h1>
+      <h1 ref={Data}></h1>
       <Cards apiData={data.coins} checker={"top10"} />
+      
     </div>
   );
 };

@@ -3,6 +3,7 @@ import Cards from "../components/Cards";
 import DummyUi from "../components/DummyUi";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
 function Trending() {
   const [data, setData] = useState([]);
 
@@ -33,9 +34,12 @@ function Trending() {
     return <DummyUi />;
   } else {
     return (
-      <div className="container w-full mx-auto">
-        <Cards apiData={data} />
-      </div>
+      <>
+        <div className="container w-full mx-auto"> 
+          <Cards apiData={data} />
+        </div>
+        
+      </>
     );
   }
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import ScrollToTop from '../components/ScrollToTop';
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -10,22 +12,21 @@ const Home = () => {
             <div className="container mx-auto px-8 lg:flex">
               <div className="text-center lg:text-left lg:w-1/2">
                 <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-                  Main title of your landing page
+                  Crypto Tracker
                 </h1>
                 <p className="text-xl lg:text-2xl mt-6 font-light">
-                  Free landing page template to promote your business startup
-                  and generate leads for the offered services
+                A platform where you can monitor and analyze real-time cryptocurrency data seamlessly.
                 </p>
                 <p className="mt-8 md:mt-12">
-                  <button
+                <Link to={"/signin"}><button
                     type="button"
-                    className=" py-4 px-12 bg-teal-500 hover:bg-teal-600 rounded text-white"
+                    className=" py-4 px-12 bg-blue-500 hover:bg-teal-600 rounded text-white"
                   >
                     Get Started
-                  </button>
+                  </button></Link>
                 </p>
                 <p className="mt-4 text-gray-600">
-                  Sed fermentum felis ut cursu
+
                 </p>
               </div>
               <div className="lg:w-1/2">
@@ -591,10 +592,9 @@ const Home = () => {
                     className="p-12 rounded-lg border border-solid border-gray-200 mb-8"
                     style={{ boxShadow: "0 10px 28px rgba(0,0,0,.08)" }}
                   >
-                    <p className="font-semibold text-xl">Service One</p>
+                    <p className="font-semibold text-xl">Real-Time Data</p>
                     <p className="mt-4">
-                      An enim nullam tempor gravida donec enim ipsum blandit
-                      porta justo integer odio velna vitae auctor integer.
+                    Stay updated with live cryptocurrency prices, market trends, and detailed coin information.
                     </p>
                   </div>
                 </div>
@@ -603,10 +603,9 @@ const Home = () => {
                     className="p-12 rounded-lg border border-solid border-gray-200 mb-8"
                     style={{ boxShadow: "0 10px 28px rgba(0,0,0,.08)" }}
                   >
-                    <p className="font-semibold text-xl">Service Two</p>
+                    <p className="font-semibold text-xl">Comprehensive Analytics</p>
                     <p className="mt-4">
-                      An enim nullam tempor gravida donec enim ipsum blandit
-                      porta justo integer odio velna vitae auctor integer.
+                    Visualize market movements with intuitive charts that provide historical data and trend analysis for informed decision-making.
                     </p>
                   </div>
                 </div>
@@ -615,19 +614,20 @@ const Home = () => {
                     className="p-12 rounded-lg border border-solid border-gray-200 mb-8"
                     style={{ boxShadow: "0 10px 28px rgba(0,0,0,.08)" }}
                   >
-                    <p className="font-semibold text-xl">Service Three</p>
+                    <p className="font-semibold text-xl">User-Friendly Interface</p>
                     <p className="mt-4">
-                      An enim nullam tempor gravida donec enim ipsum blandit
-                      porta justo integer odio velna vitae auctor integer.
+                    Enjoy a clean and responsive design that makes navigating and tracking your favourite cryptocurrencies simple and efficient.
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    </>
+   
+    </div>
+    </section>
+</main>
+</div>
+<ScrollToTop />
+</>
   );
 };
 

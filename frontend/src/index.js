@@ -9,13 +9,14 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ErrorElement from "./pages/ErrorElement";
-import CoinByIdData from "./pages/CoinByIdData";
 import { createContext } from "react";
 import { Provider } from "react-redux";
 import { cryptoStore } from "./store/cryptoStore";
 import SignIn from "./pages/SignIn";
 import Login from "./pages/Login";
 import { NotFound } from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
+import CoinsData from "./components/Coinsdata";
 
 export const Name = createContext();
 
@@ -26,7 +27,8 @@ const Applayout = () => {
         <Name.Provider value={"aditya"}>
           <Navbar />
           <Outlet />
-          {/* <Footer /> */}
+          <ScrollToTop />
+           <Footer/> 
         </Name.Provider>
       </div>
     </Provider>
@@ -41,7 +43,7 @@ const browserRouter = createBrowserRouter([
       { path: "/top10", element: <Top10 /> },
       { path: "/watchlist", element: <Watchlist /> },
       { path: "/trending", element: <Trending /> },
-      { path: "/coin/:id", element: <CoinByIdData /> },
+      { path: "/coin/:id", element: <CoinsData /> },
       { path: "/signin", element: <SignIn /> },
       { path: "/login", element: <Login /> },
       { path: "*", element: <NotFound /> },
