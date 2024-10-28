@@ -21,7 +21,7 @@ const Login = () => {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const data = await fetch("https://crypto-tracker-backend-zeta.vercel.app/api/v1/login", {
+    const data = await fetch("https://crypto-tracker-pwz6.vercel.app//api/v1/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
