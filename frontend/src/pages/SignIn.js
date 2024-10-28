@@ -24,7 +24,7 @@ const SignIn = () => {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const data = await fetch("http://localhost:3001/api/v1/createuser", {
+    const data = await fetch("https://crypto-tracker-backend-zeta.vercel.app/api/v1/createuser", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
