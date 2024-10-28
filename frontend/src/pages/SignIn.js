@@ -24,7 +24,7 @@ const SignIn = () => {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const data = await fetch("https://crypto-tracker-pwz6.vercel.app/", {
+    const data = await fetch("https://crypto-tracker-pwz6.vercel.app/api/v1/createuser", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
