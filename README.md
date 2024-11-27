@@ -24,10 +24,13 @@ CryptoTracker is a web application built using the MERN stack that allows users 
 ## Screenshots
 
 ### Homepage
-![Homepage Screenshot](link-to-homepage-screenshot)
+![Homepage Screenshot](https://github.com/Isatvikmishra/CryptoTracker/blob/main/frontend/public/home%201.png)
 
 ### Coin Details
-![Coin Details Screenshot](link-to-coin-details-screenshot)
+![Coin Details Screenshot](https://github.com/Isatvikmishra/CryptoTracker/blob/main/frontend/public/trending.png)
+
+### Watchlist
+![Coin Details Screenshot](https://github.com/Isatvikmishra/CryptoTracker/blob/main/frontend/public/watchlist.png)
 
 ## Future Enhancements
 
