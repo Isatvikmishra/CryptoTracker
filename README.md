@@ -7,6 +7,7 @@ CryptoTracker is a web application built using the MERN stack that allows users 
 - **Real-Time Data Monitoring**: Fetches live data from the CoinGecko API, including prices, market trends, and detailed coin information.
 - **Interactive Charts**: Displays historical data and trends through user-friendly and responsive charts.
 - **Clean and Responsive UI**: A streamlined interface for seamless navigation and an optimal user experience on all devices.
+- **User authentication for personalized watchlists.
 
 ## Tech Stack
 
@@ -34,7 +35,6 @@ CryptoTracker is a web application built using the MERN stack that allows users 
 
 ## Future Enhancements
 
-- User authentication for personalized watchlists.
 - Notifications for significant market changes.
 - Advanced analytics for cryptocurrencies.
 
